@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Ahsan\ProductFeed\Model\FeedGenerator">
+        <arguments>
+            <argument name="writers" xsi:type="array">
+                <item name="csv" xsi:type="object">Ahsan\ProductFeed\Model\Writer\CsvWriter</item>
+                <item name="xml" xsi:type="object">Ahsan\ProductFeed\Model\Writer\XmlWriter</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="ahsanProductFeedGenerate" xsi:type="object">Ahsan\ProductFeed\Console\Command\GenerateFeedCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

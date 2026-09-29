@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <productfeed>
+            <general>
+                <enabled>0</enabled>
+                <format>csv</format>
+                <filename>product-feed</filename>
+            </general>
+            <attributes>
+                <included_attributes>sku,name,price</included_attributes>
+            </attributes>
+        </productfeed>
+    </default>
+</config>
